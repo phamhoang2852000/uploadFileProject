@@ -14,9 +14,9 @@ class CreateFilePermissionsTable extends Migration
     public function up()
     {
         Schema::create('file_permissions', function (Blueprint $table) {
-            $table->id();
-            $table->smallIncrements('user_id');
-            $table->smallIncrements('file_id');
+            $table->smallIncrements('id');
+            $table->smallInteger('user_id');
+            $table->smallInteger('file_id');
             $table->smallInteger('is_viewed');
             $table->timestamps();
         });
