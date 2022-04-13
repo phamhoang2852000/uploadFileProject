@@ -18,3 +18,4 @@ Route::get('/', function () {
 });
 
 Route::get('/index', [UserController::class, 'index']);
+Route::get('/login', [UserController::class, 'getlogin']);
