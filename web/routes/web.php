@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/index', [UserController::class, 'index'])->name('index');
 Route::get('/login', [UserController::class, 'getLogin']);
 Route::post('/login', [UserController::class, 'postLogin'])->name('login');
+Route::get('/register', [UserController::class, 'getRegister']);
+Route::post('/register', [UserController::class, 'postRegister'])->name('register');
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/home', [UserController::class, 'index'])->name('home');
+});
