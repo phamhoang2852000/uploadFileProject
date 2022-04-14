@@ -21,7 +21,8 @@
      <div class="main">
         <div class="col-md-6 col-sm-12">
            <div class="login-form">
-              <form>
+              <form role="form" id="login" action="{{ route('login') }}" method="POST">
+              @csrf
                  <div class="form-group">
                     <label>Email</label>
                     <input type="text" name="email" class="form-control" placeholder="Email">

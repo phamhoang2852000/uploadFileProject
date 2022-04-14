@@ -17,5 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/index', [UserController::class, 'index']);
-Route::get('/login', [UserController::class, 'getlogin']);
+Route::get('/index', [UserController::class, 'index'])->name('index');
+Route::get('/login', [UserController::class, 'getLogin']);
+Route::post('/login', [UserController::class, 'postLogin'])->name('login');
