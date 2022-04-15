@@ -10,6 +10,16 @@ body {
 
 }
 
+.text-red {
+    color: red;
+    font-size: 14px;
+}
+
+.error {
+    background: antiquewhite;
+    padding: 10px
+}
+
 .sidenav {
     height: 100%;
     background-color: #000;

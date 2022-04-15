@@ -49,9 +49,15 @@ class UserController extends Controller
         $email = $request->email;
         $password = $request->password;
         if( Auth::attempt(['email' => $email, 'password' =>$password])) {
-			return redirect('home');
+			return response()->json([
+                'message' => 'Dang nhap thanh cong',
+                'status' => 200
+            ]);
 		} else {
-			return redirect('login');
+			return response()->json([
+                'message' => 'Dang nhap that bai',
+                'status' => 201
+            ]);
 		}
     }
 }
